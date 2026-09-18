@@ -20,7 +20,7 @@ const DEFAULT_SETTINGS = {
   assistantBgColor: "#2563eb", // assistant text bubble color
   noSponsor: null, // Shows sponsor in footer of chat
   sponsorText: "Powered by QuantaLLM", // default sponsor text
-  sponsorLink: "https://anythingllm.com", // default sponsor link
+  sponsorLink: "https://ultra-mega-apps.com", // default sponsor link
   position: "bottom-right", // position of chat button/window
   assistantName: "QuantaLLM Chat Assistant", // default assistant name
   assistantIcon: null, // default assistant icon
