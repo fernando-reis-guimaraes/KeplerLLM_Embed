@@ -1,4 +1,4 @@
-import AnythingLLMIcon from "@/assets/anything-llm-icon.svg";
+import KeplerLLMIcon from "@/assets/kepler-llm-icon.svg";
 import ChatService from "@/models/chatService";
 import {
   ArrowCounterClockwise,
@@ -48,12 +48,12 @@ export default function ChatWindowHeader({
     <div
       style={{ borderBottom: "1px solid #E9E9E9" }}
       className="allm-flex allm-items-center allm-relative allm-rounded-t-2xl"
-      id="anything-llm-header"
+      id="kepler-llm-header"
     >
       <div className="allm-flex allm-justify-center allm-items-center allm-w-full allm-h-[76px]">
         <img
           style={{ maxWidth: 48, maxHeight: 48 }}
-          src={iconUrl ?? AnythingLLMIcon}
+          src={iconUrl ?? KeplerLLMIcon}
           alt={iconUrl ? "Brand" : "KeplerLLM Logo"}
         />
       </div>
