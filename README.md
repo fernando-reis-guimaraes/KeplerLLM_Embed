@@ -1,12 +1,12 @@
 # KeplerLLM Embedded Chat Widget
 
-**This is a submodule of [KeplerLLM](https://github.com/Mintplex-Labs/anything-llm) - the all-in-one AI Application**
+**This is a submodule of [KeplerLLM](https://github.com/fernando-reis-guimaraes/KeplerLLM) - the all-in-one AI Application**
 
-**Please report any issues or feature requests to the [main repo](https://github.com/Mintplex-Labs/anything-llm)**
+**Please report any issues or feature requests to the [main repo](https://github.com/fernando-reis-guimaraes/KeplerLLM/issues)**
 
 > [!WARNING]
 > The core KeplerLLM team publishes a pre-built version of the script that is bundled
-> with the main application. You can find [it in the main repo here.](https://github.com/Mintplex-Labs/anything-llm/tree/master/frontend/public/embed)
+> with the main application. You can find [it in the main repo here.](https://github.com/fernando-reis-guimaraes/KeplerLLM/tree/main/frontend/public/embed)
 > You should only be working in this repo if you are wanting to build your own custom embed widget for KeplerLLM
 
 This folder of KeplerLLM contains the source code for how the embedded version of KeplerLLM works to provide a public facing interface of your workspace.
@@ -63,7 +63,7 @@ REQUIRED data attributes:
 
 **Language & Localization**
 
-- `data-language` — Set the language for the chat interface. If not specified, it will default to English (en). [Currently supported languages are available here](https://github.com/Mintplex-Labs/anythingllm-embed/main/src/locales/resources.js). (PR's welcome)
+- `data-language` — Set the language for the chat interface. If not specified, it will default to English (en). [Currently supported languages are available here](https://github.com/fernando-reis-guimaraes/KeplerLLM_Embed/main/src/locales/resources.js). (PR's welcome)
 
 **Style Overrides**
 
@@ -122,3 +122,7 @@ _work in progress_
 ### `<iframe>` Customization Options
 
 _work in progress_
+
+## Upstream credits
+
+Forked from [Mintplex-Labs/anythingllm-embed](https://github.com/Mintplex-Labs/anythingllm-embed) (upstream AnythingLLM widget). Upstream links above were re-pointed to this fork; the upstream repository remains the reference for the original work.
