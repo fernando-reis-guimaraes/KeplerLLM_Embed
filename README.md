@@ -47,9 +47,16 @@ REQUIRED data attributes:
 <script
   data-embed-id="5fc05aaf-2f2c-4c84-87a3-367a4692c1ee"
   data-base-api-url="http://localhost:3001/api/embed"
-  src="http://localhost:3000/embed/keplerllm-chat-widget.min.js"
+  src="http://localhost:3000/embed/anythingllm-chat-widget.min.js"
 ></script>
 ```
+
+> [!NOTE]
+> The `src` above matches the prebuilt asset shipped with the main app
+> (`frontend/public/embed/anythingllm-chat-widget.min.js`, which keeps its
+> upstream filename — see `CodeSnippetModal` in the main repo). A custom
+> `yarn build` in this repo instead produces `dist/keplerllm-chat-widget.min.js`;
+> point `src` at your hosted copy of that file when self-hosting the widget.
 
 ## `<script>` Customization Options
 
@@ -63,7 +70,7 @@ REQUIRED data attributes:
 
 **Language & Localization**
 
-- `data-language` — Set the language for the chat interface. If not specified, it will default to English (en). [Currently supported languages are available here](https://github.com/fernando-reis-guimaraes/KeplerLLM_Embed/main/src/locales/resources.js). (PR's welcome)
+- `data-language` — Set the language for the chat interface. If not specified, it will default to English (en). [Currently supported languages are available here](https://github.com/fernando-reis-guimaraes/KeplerLLM_Embed/blob/main/src/locales/resources.js). (PR's welcome)
 
 **Style Overrides**
 
