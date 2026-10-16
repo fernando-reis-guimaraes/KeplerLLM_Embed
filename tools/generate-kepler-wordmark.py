@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 """Deterministic Kepler LLM wordmark generator (embed variant).
 
-Reproduces the AnythingLLM embed wordmark pattern (infinity mark + Name LLM,
+Reproduces the upstream embed wordmark pattern (infinity mark + Name LLM,
 monochrome) with the text swapped to Kepler LLM, using the repo's own
 Plus Jakarta Sans font (copied from KeplerLLM/frontend).
 
 Reference geometry is measured from the last upstream embed wordmark asset
-(origin/main:src/assets/anything-llm-dark.png, 634x99):
+(original dark wordmark on origin/main, 634x99):
   - canvas 634x99; icon preserved verbatim (crop x 0..104, i.e. icon_end=99
     plus 5px margin)
   - text drawn with anchor='lt' at text_start=123, orig_top=16
   - dark variant color (34,38,40); transparent background
   - text 'Kepler LLM' (with space, monochrome) at size 86, stroke 2
 
-Rendering recipe inherited from the validated QuantaLLM rebrand
+Rendering recipe inherited from the validated prior rebrand
 (PlusJakartaSans Regular at size 86 with stroke_width=2 -- the look the
 owner already approved as 'muito bom'), adapted for the embed canvas
 (634x99 vs 704x99) and spaced text 'Kepler LLM'.
