@@ -19,10 +19,10 @@ const DEFAULT_SETTINGS = {
   userBgColor: "#2C2F35", // user text bubble color
   assistantBgColor: "#2563eb", // assistant text bubble color
   noSponsor: null, // Shows sponsor in footer of chat
-  sponsorText: "Powered by QuantaLLM", // default sponsor text
+  sponsorText: "Powered by KeplerLLM", // default sponsor text
   sponsorLink: "https://ultra-mega-apps.com", // default sponsor link
   position: "bottom-right", // position of chat button/window
-  assistantName: "QuantaLLM Chat Assistant", // default assistant name
+  assistantName: "KeplerLLM Chat Assistant", // default assistant name
   assistantIcon: null, // default assistant icon
   windowHeight: null, // height of chat window in number:css-prefix
   windowWidth: null, // width of chat window in number:css-prefix
@@ -53,7 +53,7 @@ export default function useGetScriptAttributes() {
         !embedderSettings.settings.embedId
       )
         throw new Error(
-          "[AnythingLLM Embed Module::Abort] - Invalid script tag setup detected. Missing required parameters for boot!"
+          "[KeplerLLM Embed Module::Abort] - Invalid script tag setup detected. Missing required parameters for boot!"
         );
 
       setSettings({
@@ -87,7 +87,7 @@ const validations = {
         );
       return list.map((v) => v.trim());
     } catch (e) {
-      console.error("AnythingLLMEmbed", e);
+      console.error("KeplerLLMEmbed", e);
       return this._fallbacks.defaultMessages;
     }
   },

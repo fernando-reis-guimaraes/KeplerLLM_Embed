@@ -2,7 +2,7 @@ import { forwardRef, memo, useState } from "react";
 import { Warning, CircleNotch, CaretDown } from "@phosphor-icons/react";
 import renderMarkdown from "@/utils/chat/markdown";
 import { embedderSettings } from "@/main";
-import AnythingLLMIcon from "@/assets/anything-llm-icon.svg";
+import KeplerLLMIcon from "@/assets/kepler-llm-icon.svg";
 import { formatDate } from "@/utils/date";
 
 const ThinkingIndicator = ({ hasThought }) => {
@@ -50,7 +50,7 @@ const ThoughtBubble = ({ thought }) => {
 const PromptReply = forwardRef(
   ({ uuid, reply, pending, error, sources = [], sentAt }, ref) => {
     if (!reply && sources.length === 0 && !pending && !error) return null;
-    if (error) console.error(`ANYTHING_LLM_CHAT_WIDGET_ERROR: ${error}`);
+    if (error) console.error(`KEPLER_LLM_CHAT_WIDGET_ERROR: ${error}`);
 
     // Extract content between think tags if they exist
     const thinkMatches = reply?.match(/<think>([\s\S]*?)<\/think>/g) || [];
@@ -85,12 +85,12 @@ const PromptReply = forwardRef(
         <div className="allm-py-[5px]">
           <div className="allm-text-[10px] allm-text-gray-400 allm-ml-[54px] allm-mr-6 allm-mb-2 allm-text-left allm-font-sans">
             {embedderSettings.settings.assistantName ||
-              "Anything LLM Chat Assistant"}
+              "Kepler LLM Chat Assistant"}
           </div>
           <div className="allm-flex allm-items-start allm-w-full allm-h-fit allm-justify-start">
             <img
-              src={embedderSettings.settings.assistantIcon || AnythingLLMIcon}
-              alt="Anything LLM Icon"
+              src={embedderSettings.settings.assistantIcon || KeplerLLMIcon}
+              alt="Kepler LLM Icon"
               className="allm-w-9 allm-h-9 allm-flex-shrink-0 allm-ml-2"
             />
             <div
@@ -115,12 +115,12 @@ const PromptReply = forwardRef(
         <div className="allm-py-[5px]">
           <div className="allm-text-[10px] allm-text-gray-400 allm-ml-[54px] allm-mr-6 allm-mb-2 allm-text-left allm-font-sans">
             {embedderSettings.settings.assistantName ||
-              "Anything LLM Chat Assistant"}
+              "Kepler LLM Chat Assistant"}
           </div>
           <div className="allm-flex allm-items-start allm-w-full allm-h-fit allm-justify-start">
             <img
-              src={embedderSettings.settings.assistantIcon || AnythingLLMIcon}
-              alt="Anything LLM Icon"
+              src={embedderSettings.settings.assistantIcon || KeplerLLMIcon}
+              alt="Kepler LLM Icon"
               className="allm-w-9 allm-h-9 allm-flex-shrink-0 allm-ml-2"
             />
             <div className="allm-py-[11px] allm-px-4 allm-rounded-lg allm-flex allm-flex-col allm-bg-red-200 allm-shadow-[0_4px_14px_rgba(0,0,0,0.25)] allm-mr-[37px] allm-ml-[9px]">
@@ -141,7 +141,7 @@ const PromptReply = forwardRef(
       <div className="allm-py-[5px]">
         <div className="allm-text-[10px] allm-text-gray-400 allm-ml-[54px] allm-mr-6 allm-mb-2 allm-text-left allm-font-sans">
           {embedderSettings.settings.assistantName ||
-            "Anything LLM Chat Assistant"}
+            "Kepler LLM Chat Assistant"}
         </div>
         <div
           key={uuid}
@@ -149,8 +149,8 @@ const PromptReply = forwardRef(
           className="allm-flex allm-items-start allm-w-full allm-h-fit allm-justify-start"
         >
           <img
-            src={embedderSettings.settings.assistantIcon || AnythingLLMIcon}
-            alt="Anything LLM Icon"
+            src={embedderSettings.settings.assistantIcon || KeplerLLMIcon}
+            alt="Kepler LLM Icon"
             className="allm-w-9 allm-h-9 allm-flex-shrink-0 allm-ml-2"
           />
           <div

@@ -4,7 +4,7 @@ import renderMarkdown from "@/utils/chat/markdown";
 import DOMPurify from "@/utils/chat/purify";
 import { embedderSettings } from "@/main";
 import { v4 } from "uuid";
-import AnythingLLMIcon from "@/assets/anything-llm-icon.svg";
+import KeplerLLMIcon from "@/assets/kepler-llm-icon.svg";
 import { formatDate } from "@/utils/date";
 
 const ThoughtBubble = ({ thought }) => {
@@ -51,7 +51,7 @@ const HistoricalMessage = forwardRef(
     const textSize = !!embedderSettings.settings.textSize
       ? `allm-text-[${embedderSettings.settings.textSize}px]`
       : "allm-text-sm";
-    if (error) console.error(`ANYTHING_LLM_CHAT_WIDGET_ERROR: ${error}`);
+    if (error) console.error(`KEPLER_LLM_CHAT_WIDGET_ERROR: ${error}`);
 
     // Extract content between think tags if they exist
     const thinkMatches = message?.match(/<think>([\s\S]*?)<\/think>/g) || [];
@@ -69,7 +69,7 @@ const HistoricalMessage = forwardRef(
         {role === "assistant" && (
           <div className="allm-text-[10px] allm-text-gray-400 allm-ml-[54px] allm-mr-6 allm-mb-2 allm-text-left allm-font-sans">
             {embedderSettings.settings.assistantName ||
-              "Anything LLM Chat Assistant"}
+              "Kepler LLM Chat Assistant"}
           </div>
         )}
         <div
@@ -81,10 +81,10 @@ const HistoricalMessage = forwardRef(
         >
           {role === "assistant" && (
             <img
-              src={embedderSettings.settings.assistantIcon || AnythingLLMIcon}
-              alt="Anything LLM Icon"
+              src={embedderSettings.settings.assistantIcon || KeplerLLMIcon}
+              alt="Kepler LLM Icon"
               className="allm-w-9 allm-h-9 allm-flex-shrink-0 allm-ml-2"
-              id="anything-llm-icon"
+              id="kepler-llm-icon"
             />
           )}
           <div
@@ -99,8 +99,8 @@ const HistoricalMessage = forwardRef(
               error
                 ? "allm-bg-red-200 allm-rounded-lg allm-mr-[37px] allm-ml-[9px]"
                 : role === "user"
-                  ? `${embedderSettings.USER_STYLES.base} allm-anything-llm-user-message`
-                  : `${embedderSettings.ASSISTANT_STYLES.base} allm-anything-llm-assistant-message`
+                  ? `${embedderSettings.USER_STYLES.base} allm-kepler-llm-user-message`
+                  : `${embedderSettings.ASSISTANT_STYLES.base} allm-kepler-llm-assistant-message`
             } allm-shadow-[0_4px_14px_rgba(0,0,0,0.25)]`}
           >
             <div className="allm-flex allm-flex-col">
